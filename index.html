@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Der Tinnitus-Schlüssel – Pilotgruppe | Tinnituspraxis Seedorf</title>
+<meta name="description" content="Der Tinnitus-Schlüssel: Onlinekurs mit Live-Begleitung. Acht Abende plus Nachtreffen mit Boris und Katharina Seedorf. Kleine Pilotgruppe, begrenzte Plätze.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gruen:#7ed957;
+  --gruen-dunkel:#4f8f31;
+  --gruen-hell:#eaf8e2;
+  --gold:#8e6a35;
+  --gold-hell:#d5b084;
+  --text:#39413a;
+  --text-leise:#6b736c;
+  --bg:#f7f7f4;
+  --weiss:#ffffff;
+  --rand:#e6e6e0;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+  font-family:'Open Sans',system-ui,sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  color:var(--text);
+  background:var(--bg);
+}
+
+.wrap{max-width:780px;margin:0 auto;padding:0 22px;}
+
+/* ---------- Header ---------- */
+.hero{background:var(--weiss);}
+.hero img{display:block;width:100%;max-width:1085px;margin:0 auto;height:auto;}
+
+/* ---------- Abschnitte ---------- */
+section{padding:44px 0;}
+section + section{border-top:1px solid var(--rand);}
+
+h1{
+  font-size:32px;font-weight:800;line-height:1.2;
+  color:var(--text);margin-bottom:12px;letter-spacing:-.01em;
+}
+.slogan{
+  font-style:italic;font-weight:400;font-size:19px;line-height:1.55;
+  color:var(--text-leise);margin-bottom:22px;
+}
+h2{
+  font-size:23px;font-weight:800;line-height:1.3;
+  color:var(--text);margin-bottom:16px;
+}
+h3{font-size:18px;font-weight:700;margin-bottom:6px;color:var(--text);}
+p{margin-bottom:15px;}
+p:last-child{margin-bottom:0;}
+strong{font-weight:700;}
+
+.lead{font-size:19px;line-height:1.6;}
+.leise{color:var(--text-leise);}
+
+/* ---------- Karten ---------- */
+.karte{
+  background:var(--weiss);border:1px solid var(--rand);border-radius:18px;
+  padding:26px 28px;box-shadow:0 4px 18px rgba(60,70,60,.05);
+}
+.karte + .karte{margin-top:16px;}
+
+/* ---------- Ablauf-Liste ---------- */
+.ablauf{list-style:none;margin-top:22px;}
+.ablauf li{
+  display:flex;gap:16px;align-items:flex-start;
+  padding:16px 0;border-bottom:1px solid var(--rand);
+}
+.ablauf li:last-child{border-bottom:none;}
+.nr{
+  flex-shrink:0;width:38px;height:38px;border-radius:50%;
+  background:var(--gruen-hell);color:var(--gruen-dunkel);
+  font-weight:800;font-size:15px;
+  display:flex;align-items:center;justify-content:center;
+}
+.nr.gold{background:#f4e9da;color:var(--gold);}
+
+/* ---------- Häkchen-Liste ---------- */
+.haken{list-style:none;}
+.haken li{
+  position:relative;padding-left:32px;margin-bottom:12px;
+}
+.haken li:last-child{margin-bottom:0;}
+.haken li::before{
+  content:"";position:absolute;left:0;top:8px;
+  width:18px;height:18px;border-radius:50%;
+  background:var(--gruen);
+}
+.haken li::after{
+  content:"";position:absolute;left:5.5px;top:12.5px;
+  width:8px;height:4px;border-left:2px solid #fff;border-bottom:2px solid #fff;
+  transform:rotate(-45deg);
+}
+
+/* ---------- Nicht-Liste ---------- */
+.minus{list-style:none;}
+.minus li{position:relative;padding-left:32px;margin-bottom:12px;color:var(--text-leise);}
+.minus li:last-child{margin-bottom:0;}
+.minus li::before{
+  content:"";position:absolute;left:0;top:8px;
+  width:18px;height:18px;border-radius:50%;
+  background:#b9bfb9;
+}
+.minus li::after{
+  content:"";position:absolute;left:6px;top:13px;
+  width:8px;height:8px;
+  background:
+    linear-gradient(45deg, transparent 45%, #fff 45%, #fff 55%, transparent 55%),
+    linear-gradient(-45deg, transparent 45%, #fff 45%, #fff 55%, transparent 55%);
+}
+
+/* ---------- Eckdaten ---------- */
+.eckdaten{
+  display:grid;grid-template-columns:1fr;gap:1px;
+  background:var(--rand);border:1px solid var(--rand);
+  border-radius:16px;overflow:hidden;margin-top:6px;
+}
+@media(min-width:560px){.eckdaten{grid-template-columns:1fr 1fr;}}
+.eck{background:var(--weiss);padding:18px 20px;}
+.eck .label{font-size:13.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-leise);font-weight:700;}
+.eck .wert{font-size:19px;font-weight:700;margin-top:3px;}
+.eck .wert small{font-weight:400;font-size:15px;color:var(--text-leise);display:block;margin-top:2px;}
+
+/* ---------- Preisblock ---------- */
+.preis{
+  background:var(--gruen-hell);border:1px solid #cfeabd;border-radius:18px;
+  padding:28px;text-align:center;
+}
+.preis .alt-preis{
+  font-size:26px;font-weight:700;color:#d1453b;
+  text-decoration:line-through;text-decoration-thickness:2.5px;
+  text-decoration-color:#d1453b;
+  line-height:1.2;margin-bottom:4px;
+}
+.preis .zahl{font-size:48px;font-weight:800;color:var(--gruen-dunkel);line-height:1.1;}
+.preis .zusatz{font-size:15px;color:var(--text-leise);margin-top:4px;}
+
+/* ---------- Platz-Hinweis ---------- */
+.plaetze{
+  display:inline-block;background:var(--weiss);border:2px solid var(--gruen);
+  border-radius:999px;padding:7px 20px;font-weight:700;font-size:15.5px;
+  color:var(--gruen-dunkel);
+}
+
+/* ---------- Formular ---------- */
+#reservieren{background:var(--weiss);}
+.formkarte{
+  background:var(--weiss);border:2px solid var(--gruen);border-radius:20px;
+  padding:30px 28px;box-shadow:0 8px 26px rgba(126,217,87,.14);
+}
+.formkarte h2{margin-bottom:10px;}
+.quentn-slot{margin-top:20px;}
+.feld{margin-bottom:16px;}
+.feld label{display:block;font-weight:700;font-size:15px;margin-bottom:6px;}
+.feld input{
+  width:100%;padding:14px 16px;font-size:17px;font-family:inherit;
+  border:1px solid #cdd3cd;border-radius:12px;background:#fcfdfc;color:var(--text);
+}
+.feld input:focus{outline:none;border-color:var(--gruen);box-shadow:0 0 0 3px rgba(126,217,87,.25);}
+.knopf{
+  display:block;width:100%;padding:16px 22px;font-size:18px;font-weight:800;
+  font-family:inherit;color:#1f3315;background:var(--gruen);
+  border:none;border-radius:14px;cursor:pointer;
+  transition:transform .12s,box-shadow .12s;
+}
+.knopf:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(126,217,87,.4);}
+.formhinweis{font-size:14px;color:var(--text-leise);margin-top:14px;line-height:1.55;}
+
+/* ---------- Produktbild ---------- */
+.produktbild{text-align:center;margin:0 0 26px;}
+.produktbild img{width:100%;max-width:300px;height:auto;}
+
+/* ---------- Zitat / Betonung ---------- */
+.betont{
+  border-left:4px solid var(--gruen);padding:4px 0 4px 20px;
+  font-size:19px;line-height:1.55;color:var(--text);
+}
+
+/* ---------- Kleingedrucktes ---------- */
+.klein{font-size:14.5px;line-height:1.6;color:var(--text-leise);}
+.klein p{margin-bottom:10px;}
+
+footer{
+  background:var(--weiss);border-top:1px solid var(--rand);
+  padding:26px 0 34px;text-align:center;font-size:14px;color:var(--text-leise);
+}
+footer a{color:var(--text-leise);}
+
+@media(max-width:520px){
+  body{font-size:16.5px;}
+  h1{font-size:25px;}
+  h2{font-size:21px;}
+  .lead{font-size:17.5px;}
+  .karte,.formkarte,.preis{padding:22px 20px;}
+  section{padding:36px 0;}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <img src="header.png" alt="Der Tinnitus-Schlüssel – finde deinen Weg zu mehr Ruhe und Lebensqualität">
+</div>
+
+<div class="wrap">
+
+  <!-- ============ Einstieg ============ -->
+  <section>
+    <h1>Der Tinnitus-Schlüssel</h1>
+    <p class="slogan">Ein Onlinekurs, in dem du deinen Tinnitus und seine Zusammenhänge verstehst, lernst, wie du selbst darauf einwirken kannst, und konkrete Übungen für deinen Alltag bekommst.</p>
+    <p class="lead">Dieser Kurs ist ein Onlinekurs mit Live-Begleitung. Du bist nicht allein mit Videos, sondern jede Woche mit uns beiden zusammen in einer kleinen Gruppe.</p>
+    <p>Wir geben weiter, was wir in vielen Jahren in der Praxis über Tinnitus gelernt haben. Du bekommst Wissen, Übungen für zu Hause und die Möglichkeit, deine Fragen direkt zu stellen.</p>
+    <p><strong>Diese erste Gruppe ist die Pilotgruppe des Tinnitus-Schlüssels.</strong> Hier bekommst du das gesammelte Praxiswissen von zwei Tinnitus-Experten, und die einmalige Gelegenheit, von Anfang an dabei zu sein, zum vergünstigten Pilotpreis.</p>
+  </section>
+
+  <!-- ============ Für wen ============ -->
+  <section>
+    <h2>Ist der Tinnitus-Schlüssel das Richtige für dich?</h2>
+
+    <div class="karte">
+      <h3 style="color:var(--gruen-dunkel);">Passt zu dir, wenn</h3>
+      <ul class="haken" style="margin-top:14px;">
+        <li>du deinen Tinnitus seit längerem hast und ihn endlich verstehen willst</li>
+        <li>du bereit bist, zwischen den Abenden selbst etwas zu üben</li>
+        <li>du dir an acht Abenden zwei Stunden frei halten kannst</li>
+        <li>du dich in einer kleinen Gruppe wohler fühlst als in einem großen Webinar</li>
+      </ul>
+    </div>
+
+    <div class="karte">
+      <h3 class="leise">Passt eher nicht, wenn</h3>
+      <ul class="minus" style="margin-top:14px;">
+        <li>du eine schnelle Lösung ohne eigenes Zutun suchst</li>
+        <li>dein Tinnitus ganz frisch ist und noch nicht ärztlich abgeklärt wurde</li>
+        <li>du an den meisten Abenden absehbar keine Zeit hast</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ Ablauf ============ -->
+  <section>
+    <h2>Was dich erwartet</h2>
+    <p>Jeder Abend hat denselben Rhythmus: ankommen und über die Woche sprechen, ein neuer Impuls von uns, gemeinsam üben, und am Ende etwas Konkretes für zu Hause.</p>
+
+    <ul class="ablauf">
+      <li>
+        <span class="nr">1</span>
+        <div>
+          <h3>Ankommen und Standort bestimmen</h3>
+          <p class="leise">Die Gruppe lernt sich kennen. Wo stehst du gerade, und welche Baustelle ist bei dir die wichtigste?</p>
+        </div>
+      </li>
+      <li>
+        <span class="nr">2</span>
+        <div>
+          <h3>Das Innenohr</h3>
+          <p class="leise">Hörkurve verstehen, Gehörschutz, was dem Innenohr guttut.</p>
+        </div>
+      </li>
+      <li>
+        <span class="nr">3</span>
+        <div>
+          <h3>Hörkonflikte</h3>
+          <p class="leise">Warum manche Situationen den Ton lauter machen und was dahintersteckt.</p>
+        </div>
+      </li>
+      <li>
+        <span class="nr">4</span>
+        <div>
+          <h3>Die Lebenslinie</h3>
+          <p class="leise">Der Blick zurück: Was war los, als der Ton kam?</p>
+        </div>
+      </li>
+      <li>
+        <span class="nr">5</span>
+        <div>
+          <h3>Das Nervensystem beruhigen</h3>
+          <p class="leise">Übungen zur Regulation, die du allein zu Hause anwenden kannst.</p>
+        </div>
+      </li>
+      <li>
+        <span class="nr">6</span>
+        <div>
+          <h3>Hörtraining und Ortung</h3>
+          <p class="leise">Wie das Gehirn wieder lernt, Geräusche einzuordnen. Mit Übungen zum Mitmachen.</p>
+        </div>
+      </li>
+      <li>
+        <span class="nr">7</span>
+        <div>
+          <h3>Vertiefen</h3>
+          <p class="leise">Raum für das, was in der Gruppe aufgekommen ist.</p>
+        </div>
+      </li>
+      <li>
+        <span class="nr">8</span>
+        <div>
+          <h3>Alles zusammenführen</h3>
+          <p class="leise">Deine eigene Kombination, deine Tagesroutine, und was du bei schlechten Tagen tust.</p>
+        </div>
+      </li>
+      <li>
+        <span class="nr gold">+</span>
+        <div>
+          <h3>Nachtreffen, vier Wochen später</h3>
+          <p class="leise">Wir schauen gemeinsam, was im Alltag geblieben ist und was sich verändert hat.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ Eckdaten ============ -->
+  <section>
+    <h2>Die Eckdaten</h2>
+
+    <!-- ⚠️ TERMINE EINTRAGEN, sobald festgelegt -->
+    <div class="eckdaten">
+      <div class="eck">
+        <div class="label">Start</div>
+        <div class="wert">TERMIN FOLGT<small>Wird hier eingetragen, sobald er feststeht</small></div>
+      </div>
+      <div class="eck">
+        <div class="label">Rhythmus</div>
+        <div class="wert">Wöchentlich<small>Immer am selben Wochentag</small></div>
+      </div>
+      <div class="eck">
+        <div class="label">Uhrzeit</div>
+        <div class="wert">19 bis 21 Uhr<small>Mit einer kurzen Pause</small></div>
+      </div>
+      <div class="eck">
+        <div class="label">Umfang</div>
+        <div class="wert">8 Abende + 1<small>Nachtreffen vier Wochen später</small></div>
+      </div>
+      <div class="eck">
+        <div class="label">Wo</div>
+        <div class="wert">Online<small>Per Zoom, von zu Hause aus</small></div>
+      </div>
+      <div class="eck">
+        <div class="label">Gruppengröße</div>
+        <div class="wert">10 Menschen<small>Bewusst klein gehalten, damit jeder Einzelne wirklich individuell begleitet wird</small></div>
+      </div>
+    </div>
+
+    <p style="margin-top:22px;" class="leise">Wenn du einmal nicht kannst: Die Abende werden aufgezeichnet und stehen dir im geschützten Bereich zur Verfügung.</p>
+  </section>
+
+  <!-- ============ Preis ============ -->
+  <section>
+    <div class="produktbild"><img src="produkt.png" alt="Der Tinnitus-Schlüssel"></div>
+
+    <div class="preis">
+      <div class="alt-preis">697 €</div>
+      <div class="zahl">397 €</div>
+      <div class="zusatz">einmalig, für alle neun Termine — dein Pilotpreis</div>
+      <p style="margin-top:18px;"><span class="plaetze">Nur 10 Plätze</span></p>
+    </div>
+  </section>
+
+  <!-- ============ Wer wir sind ============ -->
+  <section>
+    <h2>Wer dich begleitet</h2>
+    <div class="karte">
+      <h3>Boris Seedorf</h3>
+      <p class="leise">Heilpraktiker mit Schwerpunkt Tinnitus, seit vielen Jahren in eigener Praxis in Ahrensburg. Kennt Tinnitus auch von der anderen Seite: aus eigener Erfahrung.</p>
+    </div>
+    <div class="karte">
+      <h3>Katharina Seedorf</h3>
+      <p class="leise">Arbeitet mit Konflikt- und Traumatherapie und geht auf Nervensystem, Stress und Hörkonflikte ein, die beim Tinnitus oftmals mitspielen.</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============ Reservierung ============ -->
+<section id="reservieren" style="border-top:1px solid var(--rand);">
+  <div class="wrap">
+    <div class="formkarte">
+      <h2>Anmeldung</h2>
+      <p>Sichere dir jetzt deinen Platz beim Tinnitus-Schlüssel und finde deinen Weg zu mehr Ruhe und Lebensqualität.</p>
+
+      <!--
+        ============================================================
+        ⚠️ HIER DAS QUENTN-FORMULAR EINSETZEN
+        Den gesamten Inhalt von <div class="quentn-slot"> ... </div>
+        durch den Einbettungscode aus Quentn ersetzen.
+        Bis dahin ist das Formular unten NUR EINE ANSICHT und
+        verschickt nichts. Vorher nicht live schalten.
+        ============================================================
+      -->
+      <div class="quentn-slot">
+        <div class="feld">
+          <label for="name">Dein Name</label>
+          <input type="text" id="name" name="name" placeholder="Vor- und Nachname" autocomplete="name">
+        </div>
+        <div class="feld">
+          <label for="mail">Deine E-Mail-Adresse</label>
+          <input type="email" id="mail" name="email" placeholder="name@beispiel.de" autocomplete="email">
+        </div>
+        <button type="button" class="knopf">Jetzt anmelden – 397 € statt 697 €</button>
+      </div>
+
+      <p class="formhinweis">
+        <span style="text-decoration:line-through;color:#d1453b;font-weight:700;">697 €</span>
+        <strong style="color:var(--gruen-dunkel);font-size:16px;">397 €</strong>, nur für die Pilotgruppe.
+        Nach deiner Anmeldung bekommst du von uns eine E-Mail mit allen weiteren Schritten, inklusive der Zahlungsmöglichkeiten.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Kleingedrucktes ============ -->
+<div class="wrap">
+  <section class="klein">
+    <p><strong>Zur Einordnung:</strong> Der Tinnitus-Schlüssel vermittelt Wissen und zeigt dir Übungen, die du eigenverantwortlich anwendest. Er ersetzt keine ärztliche Untersuchung, und wir stellen keine Diagnosen.</p>
+    <p>Bitte lass deine Beschwerden ärztlich abklären, bevor du mit den Übungen beginnst. Das gilt besonders bei plötzlichem Hörverlust, Schwindel oder einem Geräusch im Takt deines Herzschlags.</p>
+    <p>Wie Menschen auf die Inhalte reagieren, ist unterschiedlich. Ein bestimmtes Ergebnis können wir dir nicht versprechen.</p>
+  </section>
+</div>
+
+<footer>
+  <a href="https://www.tinnituspraxis-seedorf.de">Tinnituspraxis Seedorf</a> ·
+  <a href="https://www.tinnituspraxis-seedorf.de/datenschutz">Datenschutz</a> ·
+  <a href="https://www.tinnituspraxis-seedorf.de/impressum">Impressum</a>
+</footer>
+
+</body>
+</html>
