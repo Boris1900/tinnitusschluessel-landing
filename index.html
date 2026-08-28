@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://assets.quentn.com/fb/0.2/dist-user-wc/embed-form.umd.min.js" defer></script>
 <style>
 :root{
   --gruen:#7ed957;
@@ -160,6 +161,7 @@ strong{font-weight:700;}
 }
 .formkarte h2{margin-bottom:10px;}
 .quentn-slot{margin-top:20px;}
+qntn-form{--qntn-primary-color:#7ed957;display:block;}
 .feld{margin-bottom:16px;}
 .feld label{display:block;font-weight:700;font-size:15px;margin-bottom:6px;}
 .feld input{
@@ -389,24 +391,11 @@ footer a{color:var(--text-leise);}
       <p>Sichere dir jetzt deinen Platz beim Tinnitus-Schlüssel und finde deinen Weg zu mehr Ruhe und Lebensqualität.</p>
 
       <!--
-        ============================================================
-        ⚠️ HIER DAS QUENTN-FORMULAR EINSETZEN
-        Den gesamten Inhalt von <div class="quentn-slot"> ... </div>
-        durch den Einbettungscode aus Quentn ersetzen.
-        Bis dahin ist das Formular unten NUR EINE ANSICHT und
-        verschickt nichts. Vorher nicht live schalten.
-        ============================================================
+        Quentn-Formular, Formular-ID 487.
+        Das Aussehen wird über die --qntn-Variablen in der CSS oben gesteuert.
       -->
       <div class="quentn-slot">
-        <div class="feld">
-          <label for="name">Dein Name</label>
-          <input type="text" id="name" name="name" placeholder="Vor- und Nachname" autocomplete="name">
-        </div>
-        <div class="feld">
-          <label for="mail">Deine E-Mail-Adresse</label>
-          <input type="email" id="mail" name="email" placeholder="name@beispiel.de" autocomplete="email">
-        </div>
-        <button type="button" class="knopf">Jetzt anmelden – 397 € statt 697 €</button>
+        <qntn-form data-source="t88of5.eu-5.quentn-site.com" data-form-id="487"></qntn-form>
       </div>
 
       <p class="formhinweis">
