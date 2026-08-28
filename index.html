@@ -71,6 +71,15 @@ strong{font-weight:700;}
 }
 .karte + .karte{margin-top:16px;}
 
+.karte-person{display:flex;align-items:center;gap:20px;}
+.portrait{
+  width:88px;height:88px;border-radius:50%;object-fit:cover;
+  flex-shrink:0;box-shadow:0 3px 10px rgba(60,70,60,.15);
+}
+@media(max-width:420px){
+  .karte-person{flex-direction:column;text-align:center;}
+}
+
 /* ---------- Ablauf-Liste ---------- */
 .ablauf{list-style:none;margin-top:22px;}
 .ablauf li{
@@ -371,13 +380,19 @@ footer a{color:var(--text-leise);}
   <!-- ============ Wer wir sind ============ -->
   <section>
     <h2>Wer dich begleitet</h2>
-    <div class="karte">
-      <h3>Boris Seedorf</h3>
-      <p class="leise">Heilpraktiker mit Schwerpunkt Tinnitus, seit vielen Jahren in eigener Praxis in Ahrensburg. Kennt Tinnitus auch von der anderen Seite: aus eigener Erfahrung.</p>
+    <div class="karte karte-person">
+      <img class="portrait" src="boris.jpg" alt="Boris Seedorf">
+      <div>
+        <h3>Boris Seedorf</h3>
+        <p class="leise">Heilpraktiker mit Schwerpunkt Tinnitus, seit vielen Jahren in eigener Praxis in Ahrensburg. Kennt Tinnitus auch von der anderen Seite: aus eigener Erfahrung.</p>
+      </div>
     </div>
-    <div class="karte">
-      <h3>Katharina Seedorf</h3>
-      <p class="leise">Arbeitet mit Konflikt- und Traumatherapie und geht auf Nervensystem, Stress und Hörkonflikte ein, die beim Tinnitus oftmals mitspielen.</p>
+    <div class="karte karte-person">
+      <img class="portrait" src="katharina.jpg" alt="Katharina Seedorf">
+      <div>
+        <h3>Katharina Seedorf</h3>
+        <p class="leise">Arbeitet mit Konflikt- und Traumatherapie und geht auf Nervensystem, Stress und Hörkonflikte ein, die beim Tinnitus oftmals mitspielen.</p>
+      </div>
     </div>
   </section>
 
