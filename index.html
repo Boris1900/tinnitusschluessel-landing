@@ -196,6 +196,30 @@ qntn-form{--qntn-primary-color:#7ed957;display:block;}
   font-size:19px;line-height:1.55;color:var(--text);
 }
 
+/* ---------- Termin-Liste ---------- */
+.termine{list-style:none;margin:18px 0 0;}
+.termine li{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  padding:11px 0;border-bottom:1px solid var(--rand);font-size:16.5px;
+}
+.termine li:last-child{border-bottom:none;}
+.termine .tnr{color:var(--gruen-dunkel);font-weight:700;}
+.termine .tdatum{font-weight:600;text-align:right;}
+.termine li.extra .tnr{color:var(--gold);}
+.termine li.extra .tdatum{font-weight:400;color:var(--text-leise);}
+
+/* ---------- CTA-Button ---------- */
+.cta-block{text-align:center;padding-top:8px;}
+.cta-knopf{
+  display:inline-block;background:var(--gruen);color:#1f3315;
+  font-weight:800;font-size:20px;font-family:inherit;
+  padding:19px 44px;border-radius:14px;text-decoration:none;
+  box-shadow:0 6px 20px rgba(126,217,87,.30);
+  transition:transform .12s,box-shadow .12s;
+}
+.cta-knopf:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(126,217,87,.45);}
+.cta-unter{font-size:14.5px;color:var(--text-leise);margin-top:14px;}
+
 /* ---------- Kleingedrucktes ---------- */
 .klein{font-size:14.5px;line-height:1.6;color:var(--text-leise);}
 .klein p{margin-bottom:10px;}
@@ -227,16 +251,32 @@ footer a{color:var(--text-leise);}
   <!-- ============ Einstieg ============ -->
   <section>
     <h1>Herzlich willkommen zum Tinnitus-Schlüssel!</h1>
-    <p class="lead">Schön, dass du dabei bist.</p>
+    <p class="lead">Schön, dass du hier bist.</p>
     <p class="slogan">Ein Onlinekurs, in dem du deinen Tinnitus und seine Zusammenhänge verstehst, lernst, wie du selbst darauf einwirken kannst, und konkrete Übungen für deinen Alltag bekommst.</p>
-    <p class="lead">Dieser Kurs ist ein Onlinekurs mit Live-Begleitung. Du bist nicht allein mit Videos, sondern jede Woche mit uns beiden zusammen in einer kleinen Gruppe.</p>
+    <p class="lead">Dieser Kurs ist ein Onlinekurs mit <u>Live-Begleitung</u>. Du bist nicht allein mit Videos, sondern jede Woche mit uns beiden zusammen in einer kleinen Gruppe.</p>
     <p>Wir geben weiter, was wir in vielen Jahren in der Praxis über Tinnitus gelernt haben. Du bekommst Wissen, Übungen für zu Hause und die Möglichkeit, deine Fragen direkt zu stellen.</p>
     <p><strong>Diese erste Gruppe ist die Pilotgruppe des Tinnitus-Schlüssels.</strong> Hier bekommst du das gesammelte Praxiswissen von zwei Tinnitus-Experten, und die einmalige Gelegenheit, von Anfang an dabei zu sein, zum vergünstigten Pilotpreis.</p>
   </section>
 
-  <!-- ============ Start ============ -->
+  <!-- ============ Start / Termine ============ -->
   <section>
-    <p class="betont">Start ist am 1. Oktober. Alles Weitere bekommst du rechtzeitig per E-Mail.</p>
+    <p class="betont">Start ist am Donnerstag, 1. Oktober um 19 Uhr. Danach treffen wir uns acht Donnerstagabende lang, jeweils von 19 bis 21 Uhr.</p>
+
+    <ul class="termine">
+      <li><span class="tnr">1. Abend</span><span class="tdatum">Do, 1. Oktober</span></li>
+      <li><span class="tnr">2. Abend</span><span class="tdatum">Do, 8. Oktober</span></li>
+      <li><span class="tnr">3. Abend</span><span class="tdatum">Do, 15. Oktober</span></li>
+      <li><span class="tnr">4. Abend</span><span class="tdatum">Do, 22. Oktober</span></li>
+      <li><span class="tnr">5. Abend</span><span class="tdatum">Do, 29. Oktober</span></li>
+      <li><span class="tnr">6. Abend</span><span class="tdatum">Do, 5. November</span></li>
+      <li><span class="tnr">7. Abend</span><span class="tdatum">Do, 12. November</span></li>
+      <li><span class="tnr">8. Abend</span><span class="tdatum">Do, 19. November</span></li>
+      <li class="extra"><span class="tnr">+ Extra-Abend</span><span class="tdatum">Termin folgt</span></li>
+    </ul>
+
+    <div class="cta-block" style="margin-top:28px;">
+      <a class="cta-knopf" href="https://www.checkout-ds24.com/product/727350">Ja, ich möchte teilnehmen</a>
+    </div>
   </section>
 
   <!-- ============ Ablauf ============ -->
@@ -304,8 +344,8 @@ footer a{color:var(--text-leise);}
       <li>
         <span class="nr gold">+</span>
         <div>
-          <h3>Nachtreffen, vier Wochen später</h3>
-          <p class="leise">Wir schauen gemeinsam, was im Alltag geblieben ist und was sich verändert hat.</p>
+          <h3>Extra-Abend, Termin folgt</h3>
+          <p class="leise">Mit etwas Abstand schauen wir gemeinsam, was im Alltag geblieben ist und was sich verändert hat.</p>
         </div>
       </li>
     </ul>
@@ -322,7 +362,7 @@ footer a{color:var(--text-leise);}
       </div>
       <div class="eck">
         <div class="label">Rhythmus</div>
-        <div class="wert">Wöchentlich<small>Immer am selben Wochentag</small></div>
+        <div class="wert">Donnerstags<small>Wöchentlich, 1. Okt. bis 19. Nov.</small></div>
       </div>
       <div class="eck">
         <div class="label">Uhrzeit</div>
@@ -330,7 +370,7 @@ footer a{color:var(--text-leise);}
       </div>
       <div class="eck">
         <div class="label">Umfang</div>
-        <div class="wert">8 Abende + 1<small>Nachtreffen vier Wochen später</small></div>
+        <div class="wert">8 Abende + 1<small>Plus ein Extra-Abend, Termin folgt</small></div>
       </div>
       <div class="eck">
         <div class="label">Wo</div>
@@ -364,9 +404,19 @@ footer a{color:var(--text-leise);}
     </div>
   </section>
 
-  <!-- ============ Abschluss ============ -->
+  <!-- ============ Preis + Anmeldung ============ -->
   <section>
-    <p class="lead" style="text-align:center;">Danke für dein Vertrauen. Wir freuen uns darauf, dich in den kommenden Wochen persönlich zu begleiten.</p>
+    <div class="preis">
+      <div class="alt-preis">697 €</div>
+      <div class="zahl">397 €</div>
+      <div class="zusatz">einmalig, als Pilotpreis für alle Abende</div>
+      <p style="margin:16px 0 22px;"><span class="plaetze">Nur 10 Plätze</span></p>
+      <div class="cta-block">
+        <a class="cta-knopf" href="https://www.checkout-ds24.com/product/727350">Ja, ich möchte teilnehmen</a>
+        <p class="cta-unter">Sichere Abwicklung über Digistore24. Nach dem Kauf melden wir uns bei dir mit allen weiteren Schritten.</p>
+      </div>
+    </div>
+    <p class="lead" style="text-align:center;margin-top:28px;">Wir freuen uns darauf, dich in den kommenden Wochen persönlich zu begleiten.</p>
     <p class="leise" style="text-align:center;">Boris &amp; Katharina</p>
   </section>
 
