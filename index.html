@@ -196,6 +196,18 @@ qntn-form{--qntn-primary-color:#7ed957;display:block;}
   font-size:19px;line-height:1.55;color:var(--text);
 }
 
+/* ---------- Video ---------- */
+.video-abschnitt{margin:8px 0 30px;}
+.video-abschnitt .video-unter{
+  font-size:15px;color:var(--text-leise);margin:0 0 18px;font-weight:600;
+}
+.video-rahmen{
+  position:relative;width:100%;padding-bottom:56.25%;height:0;
+  border-radius:18px;overflow:hidden;background:#000;
+  border:1px solid var(--rand);box-shadow:0 6px 22px rgba(60,70,60,.14);
+}
+.video-rahmen iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+
 /* ---------- Termin-Liste ---------- */
 .termine{
   list-style:none;margin:18px 0 0;
@@ -257,6 +269,16 @@ footer a{color:var(--text-leise);}
     <h1>Herzlich willkommen zum Tinnitus-Schlüssel!</h1>
     <p class="lead">Schön, dass du hier bist.</p>
     <p class="slogan">Ein 8-Wochen-Programm mit Live-Begleitung (online), in dem du deinen Tinnitus und seine Zusammenhänge verstehst. Du lernst, wie du selbst darauf einwirken kannst, und bekommst konkrete Übungen für deinen Alltag.</p>
+
+    <!-- Video: persönliche Vorstellung -->
+    <div class="video-abschnitt">
+      <h2>So begleiten wir dich durch die 8 Wochen</h2>
+      <p class="video-unter">Boris und Katharina stellen dir das Programm vor · 6 Minuten</p>
+      <div class="video-rahmen">
+        <iframe src="https://player.vimeo.com/video/1224231280?h=4122daa732&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Der Tinnitus-Schlüssel – in sieben Minuten vorgestellt"></iframe>
+      </div>
+    </div>
+
     <p class="lead">Dieses 8-Wochen-Programm läuft mit <u>Live-Begleitung</u>. Du bist nicht allein mit Videos, sondern jede Woche mit uns beiden zusammen in einer kleinen Gruppe.</p>
     <p>Wir geben weiter, was wir in vielen Jahren in der Praxis über Tinnitus gelernt haben. Du bekommst Wissen, Übungen für zu Hause und die Möglichkeit, deine Fragen direkt zu stellen.</p>
     <p><strong>Diese erste Gruppe ist die Pilotgruppe des Tinnitus-Schlüssels.</strong> Hier bekommst du das gesammelte Praxiswissen von zwei Tinnitus-Experten, und die einmalige Gelegenheit, von Anfang an dabei zu sein, zum vergünstigten Pilotpreis.</p>
@@ -380,6 +402,8 @@ footer a{color:var(--text-leise);}
   <a href="https://www.tinnituspraxis-seedorf.de/datenschutz">Datenschutz</a> ·
   <a href="https://www.tinnituspraxis-seedorf.de/impressum">Impressum</a>
 </footer>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
 
 </body>
 </html>
