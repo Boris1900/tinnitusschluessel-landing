@@ -197,14 +197,18 @@ qntn-form{--qntn-primary-color:#7ed957;display:block;}
 }
 
 /* ---------- Termin-Liste ---------- */
-.termine{list-style:none;margin:18px 0 0;}
-.termine li{
-  display:flex;align-items:baseline;gap:14px;
-  padding:11px 0;border-bottom:1px solid var(--rand);font-size:16.5px;
+.termine{
+  list-style:none;margin:18px 0 0;
+  display:grid;grid-template-columns:1fr 1fr;gap:2px 34px;
 }
-.termine li:last-child{border-bottom:none;}
-.termine .tnr{color:var(--gruen-dunkel);font-weight:700;flex:0 0 130px;}
+@media(max-width:560px){.termine{grid-template-columns:1fr;}}
+.termine li{
+  display:flex;align-items:baseline;gap:12px;
+  padding:10px 0;border-bottom:1px solid var(--rand);font-size:16.5px;
+}
+.termine .tnr{color:var(--gruen-dunkel);font-weight:700;flex:0 0 auto;min-width:80px;}
 .termine .tdatum{font-weight:600;}
+.termine li.extra{grid-column:1 / -1;border-bottom:none;margin-top:4px;}
 .termine li.extra .tnr{color:var(--gold);}
 .termine li.extra .tdatum{font-weight:400;color:var(--text-leise);}
 
@@ -320,7 +324,10 @@ footer a{color:var(--text-leise);}
       </div>
     </div>
 
-    <p style="margin-top:22px;" class="leise">Wenn du einmal nicht kannst: Die Abende werden aufgezeichnet und stehen dir im geschützten Bereich zur Verfügung.</p>
+    <div class="karte" style="margin-top:22px;">
+      <h3>Was, wenn du einen Abend nicht kannst?</h3>
+      <p class="leise" style="margin:0;">Kein Problem. Wir zeichnen jeden Abend auf und hinterlegen ihn in einem geschützten Videobereich. So kannst du eine Einheit, die du verpasst hast, in Ruhe nachholen und bleibst trotzdem in der Gruppe dabei.</p>
+    </div>
   </section>
 
   <!-- ============ Wer wir sind ============ -->
